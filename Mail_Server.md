@@ -33,7 +33,7 @@ $TTL    604800
 @       IN      NS      coba.net.
 @       IN      A       172.16.99.1
 mail    IN      A       172.16.99.1
-coba.net.       IN      MX 10   mail.coba.net.
+@       IN      MX 10   mail
 @       IN      AAAA    ::1
 
 ```
@@ -117,7 +117,7 @@ disable_plaintext_auth = no
 dpkg-reconfigure postfix
 jika muncul notip sama kaya sebelumnya maka pilih internet site
 system mail juga diisi domain (coba.net)
-lalu ok saja sampai di Local networks: disini kita tambahkan network dari ip nya misal 172.16.99.0 lalu enter terus sampai ketemu dengan internet protocols pilih 1pv4 enter dan selesai
+lalu ok saja sampai di Local networks: disini kita tambahkan network dari ip nya misal 172.16.99.0/24 lalu enter terus sampai ketemu dengan internet protocols pilih 1pv4 enter dan selesai
 ```
 > selanjutnya restart postfix dan dovecot
 ```bash
@@ -185,7 +185,7 @@ retr 1
 # jika disini ada isinya berarti sudah berhasil
 quit
 ```
-untuk test menggunakan roundcube dan thunder bird nanti menyusul
+
 
 
 
